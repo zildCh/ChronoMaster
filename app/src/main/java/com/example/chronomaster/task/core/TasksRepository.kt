@@ -39,7 +39,7 @@ interface NotesRepository {
 
         override suspend fun updateTask(id: Long, title: String, content: String, price: Int,  startTime: Long, finishTime: Long, categoryId: Long, isCompleted: Boolean) {
             val task = dao.task(id)
-            dao.insert(task.copy(title = title, content = content))
+            dao.insert(task.copy(title = title, content = content, price = price, startTime = startTime, finishTime = finishTime, categoryId = categoryId, isCompleted = isCompleted))
         }
 
         override suspend fun task(id: Long): Task =
