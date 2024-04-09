@@ -1,7 +1,7 @@
 package com.example.chronomaster.task.core
 
 import javax.inject.Inject
-
+import com.example.chronomaster.task.list.CategoryUi
 class CategoryRepository {
     interface ReadList {
         suspend fun categories(): List<Category>
@@ -31,6 +31,6 @@ data class Category(
     private val name: String,
     private  val userId: Long
 ) {
-    //fun toUi(): CategoryUi =
-       // CategoryUi.Base(id, name)
+    fun toUi(): CategoryUi =
+        CategoryUi.Base(id, name)
 }

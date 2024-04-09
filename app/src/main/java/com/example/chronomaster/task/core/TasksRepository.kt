@@ -1,9 +1,10 @@
 package com.example.chronomaster.task.core
 
 import com.example.chronomaster.core.Now
+import com.example.chronomaster.task.list.TaskUi
 import javax.inject.Inject
 
-interface NotesRepository {
+interface TasksRepository {
     interface ReadList {
         //suspend fun tasks(startTime: Long): List<Task>
         suspend fun tasks(): List<Task>
@@ -58,7 +59,7 @@ data class Task(
     private val categoryId: Long,
     private val isCompleted: Boolean
 ) {
- //fun toUi() =
- //NoteUi(id, title, content, date)
+ fun toUi() =
+ TaskUi(taskId, title, content, price, startTime, finishTime, categoryId, isCompleted)
     fun categoryId() = categoryId
 }
