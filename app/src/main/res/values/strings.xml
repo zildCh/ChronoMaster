@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ChronoMaster</string>
+    <string name="hint_title">Enter task name</string>
+    <string name="hint_time">--:--</string>
+    <string name="hint_date">dd/mm/yy</string>
+    <string name="content_description_delete">delete</string>
+    <string name="task_name">Task name</string>
+    <string name="task_description">Task description</string>
+    <string name="task_content">Enter task description</string>
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>>
+    <string name="category">Task category</string>>
 </resources>
