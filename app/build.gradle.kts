@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    kotlin("kapt")
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
@@ -59,6 +60,16 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+    implementation("com.google.dagger:hilt-android:2.48")
+
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.material)
+    annotationProcessor("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation(libs.androidx.viewbinding)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -66,4 +77,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }

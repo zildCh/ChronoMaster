@@ -1,4 +1,4 @@
-package com.example.chronomaster
+package com.example.chronomaster.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
